@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees - Payroll Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-wallet fa-2x"></i>
+            <h2>Nexus Payroll</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="employees.html" class="nav-item active">
+                <i class="fas fa-users"></i> Employees
+            </a>
+            <a href="payroll.html" class="nav-item">
+                <i class="fas fa-file-invoice-dollar"></i> Payroll
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="user-profile">
+                <span style="font-weight: 500; font-size: 14px;">Admin User</span>
+                <div class="avatar">A</div>
+            </div>
+        </header>
+
+        <div class="page-header">
+            <div>
+                <h1 style="font-size: 24px; color: var(--text-dark);">Employee Management</h1>
+                <p style="color: var(--text-light); font-size: 14px; margin-top: 4px;">View and manage your organization's employees.</p>
+            </div>
+            <button class="btn btn-primary"><i class="fas fa-plus"></i> Add Employee</button>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center;">
+                <h2 style="font-size: 18px;">All Employees</h2>
+                <div>
+                    <input type="text" class="form-control" placeholder="Search employees..." style="width: 250px; padding: 8px 12px;">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EMP ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

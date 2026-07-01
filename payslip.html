@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip - Payroll Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-wallet fa-2x"></i>
+            <h2>Nexus Payroll</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="employees.html" class="nav-item">
+                <i class="fas fa-users"></i> Employees
+            </a>
+            <a href="payroll.html" class="nav-item active">
+                <i class="fas fa-file-invoice-dollar"></i> Payroll
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="user-profile">
+                <span style="font-weight: 500; font-size: 14px;">Admin User</span>
+                <div class="avatar">A</div>
+            </div>
+        </header>
+
+        <div class="page-header">
+            <div>
+                <a href="payroll.html" style="text-decoration: none; color: var(--text-light); font-size: 14px; margin-bottom: 8px; display: block;">
+                    <i class="fas fa-arrow-left"></i> Back to Payroll
+                </a>
+                <h1 style="font-size: 24px; color: var(--text-dark);">Payslip Generation</h1>
+            </div>
+            <div>
+                <button class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</button>
+                <button class="btn btn-primary" id="btnPrint"><i class="fas fa-print"></i> Print Payslip</button>
+            </div>
+        </div>
+
+        <div class="payslip-container">
+            <div class="payslip-header">
+                <h1>NEXUS TECHNOLOGIES INC.</h1>
+                <p>123 Corporate Blvd, Tech City, USA 90210</p>
+                <h3 style="margin-top: 16px; color: var(--text-dark);">SALARY SLIP FOR MONTH: APRIL 2026</h3>
+            </div>
+
+            <div class="payslip-details">
+                <div>
+                    <div class="detail-group">
+                        <strong>Employee ID:</strong> <span>EMP001</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Employee Name:</strong> <span>John Doe</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Department:</strong> <span>Engineering</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Designation:</strong> <span>Senior Developer</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="detail-group">
+                        <strong>Date of Joining:</strong> <span>10-Jan-2023</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Bank Name:</strong> <span>Global Finance Bank</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Account No:</strong> <span>XXXX-XXXX-1234</span>
+                    </div>
+                    <div class="detail-group">
+                        <strong>Days Payable:</strong> <span>30</span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="salary-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Earnings</th>
+                        <th style="text-align: right;">Amount ($)</th>
+                        <th style="width: 50%;">Deductions</th>
+                        <th style="text-align: right;">Amount ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Salary</td>
+                        <td style="text-align: right;">4,500.00</td>
+                        <td>Income Tax</td>
+                        <td style="text-align: right;">450.00</td>
+                    </tr>
+                    <tr>
+                        <td>House Rent Allowance</td>
+                        <td style="text-align: right;">1,500.00</td>
+                        <td>Health Insurance</td>
+                        <td style="text-align: right;">125.00</td>
+                    </tr>
+                    <tr>
+                        <td>Special Allowance</td>
+                        <td style="text-align: right;">1,083.33</td>
+                        <td>Provident Fund</td>
+                        <td style="text-align: right;">133.33</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Earnings</strong></td>
+                        <td style="text-align: right;"><strong>7,083.33</strong></td>
+                        <td><strong>Total Deductions</strong></td>
+                        <td style="text-align: right; color: var(--danger);"><strong>708.33</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="net-pay">
+                <h3>Net Salary Payable</h3>
+                <h2>$6,375.00</h2>
+                <p style="font-size: 13px; color: var(--text-light); margin-top: 8px;">(Six Thousand Three Hundred Seventy-Five Dollars Only)</p>
+            </div>
+            
+            <div style="margin-top: 50px; display: flex; justify-content: space-between; text-align: center;">
+                <div style="width: 250px; border-top: 1px solid var(--border); padding-top: 8px;">Employer Signature</div>
+                <div style="width: 250px; border-top: 1px solid var(--border); padding-top: 8px;">Employee Signature</div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
